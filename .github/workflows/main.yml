@@ -2,10 +2,10 @@ name: Atualizar Feed RSS DRE
 
 on:
   schedule:
-    # Executar diariamente às 8:00 UTC
-    - cron: "15 8 * * *"
+    # 10:05 em Portugal continental durante o horario de verao (09:05 UTC)
+    - cron: "5 9 * * *"
   workflow_dispatch:
-    # Permitir execução manual
+    # Permitir execucao manual
   push:
     branches:
       - main
@@ -64,4 +64,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add RSS/
           git add data/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🔄 Atualizar feed RSS DRE e procedimentos ativos - $(date +'%Y-%m-%d %H:%M:%S')" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Atualizar feed RSS DRE e procedimentos ativos - $(date +'%Y-%m-%d %H:%M:%S')" && git push)
