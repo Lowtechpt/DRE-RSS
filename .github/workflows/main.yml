@@ -6,6 +6,16 @@ on:
     - cron: "0 8 * * *"
   workflow_dispatch:
     # Permitir execução manual
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/main.yml"
+      - "scripts/**"
+      - "requirements.txt"
+
+permissions:
+  contents: write
 
 jobs:
   update-rss:
