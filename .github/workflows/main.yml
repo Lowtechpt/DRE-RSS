@@ -2,8 +2,8 @@ name: Atualizar Feed RSS DRE
 
 on:
   schedule:
-    # 10:05 em Portugal continental durante o horario de verao (09:05 UTC)
-    - cron: "5 9 * * *"
+    # 10:15 em Portugal continental durante o horario de verao (09:15 UTC)
+    - cron: "15 9 * * *"
   workflow_dispatch:
     # Permitir execucao manual
   push:
