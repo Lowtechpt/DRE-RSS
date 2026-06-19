@@ -3,7 +3,7 @@ name: Atualizar Feed RSS DRE
 on:
   schedule:
     # Executar diariamente às 8:00 UTC
-    - cron: "0 8 * * *"
+    - cron: "6 8 * * *"
   workflow_dispatch:
     # Permitir execução manual
   push:
