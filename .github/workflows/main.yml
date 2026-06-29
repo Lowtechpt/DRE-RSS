@@ -2,8 +2,11 @@ name: Atualizar Feed RSS DRE
 
 on:
   schedule:
-    # 06:00 em Portugal continental durante o horario de verao (05:00 UTC)
+    # Varias corridas de manha (UTC) para garantir publicacao bem antes das 09:00
+    # Lisboa, mesmo com os atrasos aleatorios (0-3h) dos jobs agendados do GitHub.
+    - cron: "0 3 * * *"
     - cron: "0 5 * * *"
+    - cron: "0 6 * * *"
   workflow_dispatch:
     # Permitir execucao manual
   push:
